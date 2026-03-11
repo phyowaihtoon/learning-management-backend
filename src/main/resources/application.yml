@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: learning-management-system
+  profiles:
+    active: dev
