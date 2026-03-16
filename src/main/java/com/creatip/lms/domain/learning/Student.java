@@ -1,6 +1,6 @@
 package com.creatip.lms.domain.learning;
 
-import com.creatip.lms.domain.base.LmsAuditableEntity;
+import com.creatip.lms.domain.base.AbstractAuditingEntity;
 import com.creatip.lms.domain.base.User;
 import com.creatip.lms.domain.learning.enums.*;
 import jakarta.persistence.Column;
@@ -17,7 +17,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "student")
-public class Student extends LmsAuditableEntity implements Serializable {
+public class Student extends AbstractAuditingEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

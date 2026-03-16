@@ -1,6 +1,6 @@
 package com.creatip.lms.domain.learning;
 
-import com.creatip.lms.domain.base.LmsAuditableEntity;
+import com.creatip.lms.domain.base.AbstractAuditingEntity;
 import com.creatip.lms.domain.learning.enums.*;
 import jakarta.persistence.Column;
 import jakarta.persistence.Convert;
@@ -18,7 +18,7 @@ import java.time.LocalTime;
 
 @Entity
 @Table(name = "course_session")
-public class CourseSession extends LmsAuditableEntity implements Serializable {
+public class CourseSession extends AbstractAuditingEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

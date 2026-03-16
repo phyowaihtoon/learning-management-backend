@@ -1,5 +1,7 @@
 insert into creatip_role (name) values('ROLE_ADMIN');
 insert into creatip_role (name) values('ROLE_MANAGER');
+insert into creatip_role (name) values('ROLE_INSTRUCTOR');
+insert into creatip_role (name) values('ROLE_STUDENT');
 
 -- Password : user1,user2, user3
 insert into creatip_user (username,password_hash,activated,first_name,created_date,created_by) values ('user1','$2y$10$sWKj/AGayoZxSVFJAtxN/.LmrzzEXBWvIH3NdwyIZ55hYQlWElXLK',1,'admin',sysdate(),system_user());
