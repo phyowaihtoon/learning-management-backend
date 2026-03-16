@@ -1,6 +1,6 @@
 package com.creatip.lms.repository;
 
-import com.creatip.lms.domain.ActionItem;
+import com.creatip.lms.domain.base.ActionItem;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

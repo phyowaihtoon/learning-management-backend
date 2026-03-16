@@ -1,4 +1,4 @@
-package com.creatip.lms.domain;
+package com.creatip.lms.domain.base;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;

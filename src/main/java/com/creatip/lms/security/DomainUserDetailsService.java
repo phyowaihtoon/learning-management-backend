@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 import com.creatip.lms.repository.UserRepository;
-import com.creatip.lms.domain.User;
+import com.creatip.lms.domain.base.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.GrantedAuthority;

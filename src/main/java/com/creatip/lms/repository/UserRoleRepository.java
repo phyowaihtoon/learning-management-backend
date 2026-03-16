@@ -1,6 +1,6 @@
 package com.creatip.lms.repository;
 
-import com.creatip.lms.domain.UserRole;
+import com.creatip.lms.domain.base.UserRole;
 
 import java.util.Optional;
 

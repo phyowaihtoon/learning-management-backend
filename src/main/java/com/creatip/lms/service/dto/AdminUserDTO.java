@@ -1,8 +1,8 @@
 package com.creatip.lms.service.dto;
 
 import com.creatip.lms.config.Constants;
-import com.creatip.lms.domain.User;
-import com.creatip.lms.domain.UserRole;
+import com.creatip.lms.domain.base.User;
+import com.creatip.lms.domain.base.UserRole;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.time.Instant;

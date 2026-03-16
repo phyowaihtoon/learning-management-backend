@@ -1,6 +1,6 @@
 package com.creatip.lms.repository;
 
-import com.creatip.lms.domain.User;
+import com.creatip.lms.domain.base.User;
 
 import java.time.Instant;
 import java.util.List;

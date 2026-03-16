@@ -1,14 +1,16 @@
-package com.creatip.lms.domain.learning;
+package com.creatip.lms.domain.base;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.PrePersist;
+import jakarta.persistence.PreUpdate;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @MappedSuperclass
 public abstract class LmsAuditableEntity implements Serializable {
 
-    @Column(name = "created_at", nullable = false)
+    @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
     @Column(name = "created_by", length = 255)
@@ -19,6 +21,18 @@ public abstract class LmsAuditableEntity implements Serializable {
 
     @Column(name = "updated_by", length = 255)
     private String updatedBy;
+
+    @PrePersist
+    public void prePersist() {
+        LocalDateTime now = LocalDateTime.now();
+        this.createdAt = now;
+        this.updatedAt = now;
+    }
+
+    @PreUpdate
+    public void preUpdate() {
+        this.updatedAt = LocalDateTime.now();
+    }
 
     public LocalDateTime getCreatedAt() {
         return createdAt;

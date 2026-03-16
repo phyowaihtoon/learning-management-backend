@@ -1,6 +1,9 @@
 package com.creatip.lms.domain.learning;
 
+import com.creatip.lms.domain.base.LmsAuditableEntity;
+import com.creatip.lms.domain.learning.enums.*;
 import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -38,8 +41,9 @@ public class SessionEnrollment extends LmsAuditableEntity implements Serializabl
     @Column(name = "enrolled_at", nullable = false)
     private LocalDateTime enrolledAt;
 
-    @Column(name = "status")
-    private Integer status;
+    @Convert(converter = SessionEnrollmentStatusConverter.class)
+    @Column(name = "status", nullable = false)
+    private SessionEnrollmentStatus status;
 
     public Long getSessionEnrollmentId() {
         return sessionEnrollmentId;
@@ -73,11 +77,11 @@ public class SessionEnrollment extends LmsAuditableEntity implements Serializabl
         this.enrolledAt = enrolledAt;
     }
 
-    public Integer getStatus() {
+    public SessionEnrollmentStatus getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(SessionEnrollmentStatus status) {
         this.status = status;
     }
 }

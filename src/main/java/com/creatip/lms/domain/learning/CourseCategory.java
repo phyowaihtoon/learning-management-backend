@@ -1,6 +1,9 @@
 package com.creatip.lms.domain.learning;
 
+import com.creatip.lms.domain.base.LmsAuditableEntity;
+import com.creatip.lms.domain.learning.enums.*;
 import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,7 +12,7 @@ import jakarta.persistence.Table;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "category")
+@Table(name = "course_category")
 public class CourseCategory extends LmsAuditableEntity implements Serializable {
 
     @Id
@@ -23,8 +26,9 @@ public class CourseCategory extends LmsAuditableEntity implements Serializable {
     @Column(name = "description", columnDefinition = "TEXT")
     private String description;
 
-    @Column(name = "status")
-    private Integer status;
+    @Convert(converter = CategoryStatusConverter.class)
+    @Column(name = "status", nullable = false)
+    private CategoryStatus status;
 
     public Long getCategoryId() {
         return categoryId;
@@ -50,11 +54,11 @@ public class CourseCategory extends LmsAuditableEntity implements Serializable {
         this.description = description;
     }
 
-    public Integer getStatus() {
+    public CategoryStatus getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(CategoryStatus status) {
         this.status = status;
     }
 }

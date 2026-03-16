@@ -1,7 +1,7 @@
 package com.creatip.lms.service.mapper;
 
-import com.creatip.lms.domain.User;
-import com.creatip.lms.domain.UserRole;
+import com.creatip.lms.domain.base.User;
+import com.creatip.lms.domain.base.UserRole;
 import com.creatip.lms.service.dto.AdminUserDTO;
 import com.creatip.lms.service.dto.UserDTO;
 import java.util.*;

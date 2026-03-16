@@ -1,5 +1,6 @@
 package com.creatip.lms.domain.learning;
 
+import com.creatip.lms.domain.base.LmsAuditableEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;

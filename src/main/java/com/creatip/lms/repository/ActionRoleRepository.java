@@ -1,6 +1,6 @@
 package com.creatip.lms.repository;
 
-import com.creatip.lms.domain.ActionRole;
+import com.creatip.lms.domain.base.ActionRole;
 
 import java.util.Collection;
 import java.util.List;

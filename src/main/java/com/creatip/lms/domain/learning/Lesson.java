@@ -1,6 +1,9 @@
 package com.creatip.lms.domain.learning;
 
+import com.creatip.lms.domain.base.LmsAuditableEntity;
+import com.creatip.lms.domain.learning.enums.*;
 import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -27,8 +30,9 @@ public class Lesson extends LmsAuditableEntity implements Serializable {
     @Column(name = "title", nullable = false)
     private String title;
 
+    @Convert(converter = LessonContentTypeConverter.class)
     @Column(name = "content_type", nullable = false)
-    private Integer contentType;
+    private LessonContentType contentType;
 
     @Column(name = "content_url", nullable = false, length = 500)
     private String contentUrl;
@@ -63,11 +67,11 @@ public class Lesson extends LmsAuditableEntity implements Serializable {
         this.title = title;
     }
 
-    public Integer getContentType() {
+    public LessonContentType getContentType() {
         return contentType;
     }
 
-    public void setContentType(Integer contentType) {
+    public void setContentType(LessonContentType contentType) {
         this.contentType = contentType;
     }
 

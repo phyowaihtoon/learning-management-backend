@@ -1,6 +1,6 @@
 package com.creatip.lms.service.dto;
 
-import com.creatip.lms.domain.User;
+import com.creatip.lms.domain.base.User;
 import java.io.Serializable;
 import java.util.Objects;
 

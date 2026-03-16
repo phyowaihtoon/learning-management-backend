@@ -1,4 +1,4 @@
-package com.creatip.lms.domain;
+package com.creatip.lms.domain.base;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;

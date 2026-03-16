@@ -1,7 +1,10 @@
 package com.creatip.lms.domain.learning;
 
-import com.creatip.lms.domain.User;
+import com.creatip.lms.domain.base.LmsAuditableEntity;
+import com.creatip.lms.domain.base.User;
+import com.creatip.lms.domain.learning.enums.*;
 import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -31,8 +34,9 @@ public class Student extends LmsAuditableEntity implements Serializable {
     @JoinColumn(name = "user_id", nullable = false, unique = true)
     private User user;
 
-    @Column(name = "status")
-    private Integer status;
+    @Convert(converter = StudentStatusConverter.class)
+    @Column(name = "status", nullable = false)
+    private StudentStatus status;
 
     public Long getStudentId() {
         return studentId;
@@ -66,11 +70,11 @@ public class Student extends LmsAuditableEntity implements Serializable {
         this.user = user;
     }
 
-    public Integer getStatus() {
+    public StudentStatus getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(StudentStatus status) {
         this.status = status;
     }
 }

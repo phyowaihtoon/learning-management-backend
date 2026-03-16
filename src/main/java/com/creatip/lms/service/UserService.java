@@ -1,8 +1,8 @@
 package com.creatip.lms.service;
 //Change import package to com.creatip.lms
 import com.creatip.lms.config.Constants;
-import com.creatip.lms.domain.User;
-import com.creatip.lms.domain.UserRole;
+import com.creatip.lms.domain.base.User;
+import com.creatip.lms.domain.base.UserRole;
 import com.creatip.lms.repository.UserRepository;
 import com.creatip.lms.repository.UserRoleRepository;
 import com.creatip.lms.security.RandomUtil;

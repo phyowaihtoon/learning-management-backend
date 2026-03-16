@@ -1,8 +1,8 @@
 package com.creatip.lms.service.impl;
 
-import com.creatip.lms.domain.ActionItem;
-import com.creatip.lms.domain.ActionItemOrder;
-import com.creatip.lms.domain.ActionRole;
+import com.creatip.lms.domain.base.ActionItem;
+import com.creatip.lms.domain.base.ActionItemOrder;
+import com.creatip.lms.domain.base.ActionRole;
 import com.creatip.lms.repository.ActionItemOrderRepository;
 import com.creatip.lms.repository.ActionItemRepository;
 import com.creatip.lms.repository.ActionRoleRepository;
